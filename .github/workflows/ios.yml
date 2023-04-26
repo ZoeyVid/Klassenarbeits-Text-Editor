@@ -18,4 +18,4 @@ jobs:
         xcode-version: latest-stable
         
     - name: Build and test
-      run: xcodebuild clean build test -project
+      run: xcodebuild clean build test -project klassenarbeits-text-editor.xcodeproj
