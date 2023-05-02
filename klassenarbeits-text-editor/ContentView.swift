@@ -11,16 +11,16 @@ struct ContentView: View {
     let defaults = UserDefaults.standard
     @State private var isPresentingConfirm: Bool = false
     @State private var editor = 0
-    @State var textMain: String = "Viel Glück!"
-    @State var textPlan: String = "Glück Viel!"
-    @State var textNote: String = "Glückliche Viele!"
+    @State var textMain: String = "Viel Glück! (Text Feld) Dieses wird über den Teilen Knopf geteilt"
+    @State var textPlan: String = "Glück Viel! (Schreibplan)"
+    @State var textNote: String = "Glückliche Viele! (Notizen)"
     
     var body: some View {
         NavigationStack {
           Picker("What is your favorite color?", selection: $editor) {
-              Text("Text").tag(0)
-              Text("Schreibplan").tag(1)
-              Text("Notizen").tag(2)
+              Text("1").tag(0)
+              Text("2").tag(1)
+              Text("3").tag(2)
           } .pickerStyle(.segmented)
                 .frame(width: 300, height: 30, alignment: .centerLastTextBaseline)
             if editor == 0 {
@@ -63,12 +63,12 @@ struct ContentView: View {
                             .confirmationDialog("Sicher?",
                               isPresented: $isPresentingConfirm) {
                               Button("Ja alles löschen", role: .destructive) {
-                                  textMain = "Viel Glück!"
-                                  defaults.set("Viel Glück!", forKey: "textMain")
-                                  textPlan = "Glück Viel!"
-                                  defaults.set("Glück Viel!", forKey: "textPlan")
-                                  textNote = "Glückliche Viele!"
-                                  defaults.set("Glückliche Viele!", forKey: "textNote")
+                                  textMain = "Viel Glück!  (Text Feld) Dieses wird über den Teilen Knopf geteilt"
+                                  defaults.set("Viel Glück!  (Text Feld) Dieses wird über den Teilen Knopf geteilt", forKey: "textMain")
+                                  textPlan = "Glück Viel! (Schreibplan)"
+                                  defaults.set("Glück Viel! (Schreibplan)", forKey: "textPlan")
+                                  textNote = "Glückliche Viele! (Notizen)"
+                                  defaults.set("Glückliche Viele! (Notizen)", forKey: "textNote")
                                   isPresentingConfirm = false
                                }
                              }
