@@ -16,12 +16,12 @@ jobs:
       with:
         xcode-version: latest-stable
 
-    - name: Install CocoaPods
-      run: sudo gem install cocoapods
+#    - name: Install CocoaPods
+#      run: sudo gem install cocoapods
 
-    - name: Install Dependencies
-      run: |
-        pod install
+#    - name: Install Dependencies
+#      run: |
+#        pod install
 
     - name: Build and Archive
       run: |
@@ -36,8 +36,7 @@ jobs:
       run: |
         xcodebuild -exportArchive \
         -archivePath klassenarbeits-text-editor.xcarchive \
-        -exportPath klassenarbeits-text-editor \
-        -exportOptionsPlist exportOptions.plist
+        -exportPath klassenarbeits-text-editor
 
     - name: Compress IPA
       run: |
