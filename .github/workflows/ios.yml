@@ -40,10 +40,16 @@ jobs:
         -archivePath klassenarbeits-text-editor.xcarchive \
         -exportPath klassenarbeits-text-editor \
         -exportOptionsPlist exportOptions.plist \
-        -developmentTeam "" \
         -allowProvisioningUpdates CODE_SIGN_IDENTITY="" CODE_SIGNING_REQUIRED=NO DEVELOPMENT_TEAM=""
 
     - name: Compress IPA
       run: |
         cd klassenarbeits-text-editor
         zip -r -X klassenarbeits-text-editor.ipa Payload
+          APP_NAME: ${{ inputs.app_name }}
+
+    - name: Upload Artifact
+      uses: actions/upload-artifact@v3
+      with:
+        name: artifacts
+        path: klassenarbeits-text-editor.ipa
