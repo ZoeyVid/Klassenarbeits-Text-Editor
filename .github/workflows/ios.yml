@@ -32,7 +32,6 @@ jobs:
         -archivePath klassenarbeits-text-editor.xcarchive \
         -sdk iphoneos \
         -configuration Release \
-        -developmentTeam "" \
         -codeSigningIdentity "" \
         -codeSigningRequired NO
 
