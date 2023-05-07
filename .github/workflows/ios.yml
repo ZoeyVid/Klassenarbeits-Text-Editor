@@ -25,6 +25,7 @@ jobs:
 
     - name: Build and Archive
       run: |
+        xcodebuild -showsdks
         xcodebuild archive \
         -project klassenarbeits-text-editor.xcodeproj \
         -scheme klassenarbeits-text-editor \
