@@ -30,7 +30,8 @@ jobs:
         -scheme klassenarbeits-text-editor \
         -archivePath klassenarbeits-text-editor.xcarchive \
         -sdk iphoneos \
-        -configuration Release
+        -configuration Release \
+        -allowProvisioningUpdates
 
     - name: Export Archive
       run: |
