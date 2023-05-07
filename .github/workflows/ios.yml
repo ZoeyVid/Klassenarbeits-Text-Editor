@@ -32,8 +32,7 @@ jobs:
         -archivePath klassenarbeits-text-editor.xcarchive \
         -sdk iphoneos \
         -configuration Release \
-        -codeSigningIdentity "" \
-        -codeSigningRequired NO
+        -allowProvisioningUpdates CODE_SIGN_IDENTITY="" CODE_SIGNING_REQUIRED=NO
 
     - name: Export Archive
       run: |
@@ -42,8 +41,7 @@ jobs:
         -exportPath klassenarbeits-text-editor \
         -exportOptionsPlist exportOptions.plist \
         -developmentTeam "" \
-        -codeSigningIdentity "" \
-        -codeSigningRequired NO
+        -allowProvisioningUpdates CODE_SIGN_IDENTITY="" CODE_SIGNING_REQUIRED=NO
 
     - name: Compress IPA
       run: |
