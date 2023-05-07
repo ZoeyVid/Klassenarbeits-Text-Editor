@@ -29,9 +29,9 @@ jobs:
         -project klassenarbeits-text-editor.xcodeproj \
         -scheme klassenarbeits-text-editor \
         -archivePath klassenarbeits-text-editor.xcarchive \
-        -sdk iphoneos \
+        -sdk ipados \
         -configuration Release \
-        -allowProvisioningUpdates
+        -allowProvisioningUpdates CODE_SIGN_IDENTITY="" CODE_SIGNING_REQUIRED=NO
 
     - name: Export Archive
       run: |
