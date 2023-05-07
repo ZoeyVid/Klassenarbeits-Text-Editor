@@ -12,5 +12,7 @@
     <string>manual</string>
     <key>stripSwiftSymbols</key>
     <true/>
+    <key>teamID</key>
+    <string>ZoeyVid</string>
   </dict>
 </plist>
